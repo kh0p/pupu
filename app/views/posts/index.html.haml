@@ -1,0 +1,7 @@
+.posts-wrap.container-fluid
+  -@posts.each do |post|
+    .post.row
+      .col-sm-9
+        =image_tag post.image.url(:medium), :class => "img-responsive"
+      .col-sm-3
+        =post.caption
