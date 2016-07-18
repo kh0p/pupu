@@ -41,6 +41,8 @@ GEM
     arel (7.0.0)
     autoprefixer-rails (6.3.7)
       execjs
+    bootstrap-autohidingnavbar-rails (1.0.0)
+      railties (>= 3.1)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -176,6 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-autohidingnavbar-rails
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
