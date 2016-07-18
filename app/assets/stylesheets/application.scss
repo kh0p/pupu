@@ -17,12 +17,344 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ * {
+   padding: 0px;
+   margin: 0px;
+ }
+
+ @font-face {
+   font-family: 'Icomoon';
+   src:font-url('icomoon.eot');
+   src:font-url('icomoon.eot?#iefix') format('embedded-opentype'),
+     font-url('icomoon.svg#icomoon') format('svg'),
+     font-url('icomoon.woff') format('woff'),
+     font-url('icomoon.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ /* Icon font styles */
+ [class^="icon-"], [class*=" icon-"] {
+   /* use !important to prevent issues with browser extensions that change fonts */
+   font-family: 'Icomoon' !important;
+   speak: none;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+
+   /* "Better" Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
  body {
    background-color: #fafafa;
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
  }
 
- .posts-wrap {
-   margin: 16px;
-   padding: 24px;
+ .navbar-brand {
+   a {
+     color: #125688;
+   }
+ }
+
+ .navbar-default {
+   background-color: #fff;
+   height: 54px;
+   .navbar-nav li a {
+     color: #125688;
+   }
+ }
+
+ .navbar-container {
+   width: 640px;
+   margin: 0 auto;
+ }
+
+ .posts-wrapper {
+   padding-top: 40px;
+   margin: 0 auto;
+   max-width: 642px;
+   width: 100%;
+ }
+
+ .post {
+   background-color: #fff;
+   border-color: #edeeee;
+   border-style: solid;
+   border-radius: 4px;
+   border-width: 1px;
+   margin-bottom: 60px;
+ }
+
+ .post-head {
+   height: 64px;
+   padding: 14px 20px;
+   color: #125688;
+   font-size: 15px;
+   line-height: 18px;
+   .thumbnail {}
+   .name {
+     display: block;
+   }
+ }
+
+ .image {
+   border-bottom: 1px solid #eeefef;
+   border-top: 1px solid #eeefef;
+ }
+
+ .caption {
+   padding: 24px 24px;
+   font-size: 15px;
+   line-height: 18px;
+
+ }
+
+ .form-wrapper {
+   width: 60%;
+   margin: 20px auto;
+   background-color: #fff;
+   padding: 40px;
+   border: 1px solid #eeefef;
+   border-radius: 3px;
+ }
+
+ .edit-links {
+   margin-top: 20px;
+   margin-bottom: 40px;
+ }
+
+ .icon-image:before {
+     content: "\e90d";
+ }
+ .icon-images:before {
+     content: "\e90e";
+ }
+ .icon-camera:before {
+     content: "\e90f";
+ }
+ .icon-location:before {
+     content: "\e947";
+ }
+ .icon-location2:before {
+     content: "\e948";
+ }
+ .icon-compass2:before {
+     content: "\e94a";
+ }
+ .icon-map2:before {
+     content: "\e94c";
+ }
+ .icon-bubble2:before {
+     content: "\e96e";
+ }
+ .icon-bubbles3:before {
+     content: "\e96f";
+ }
+ .icon-quotes-left:before {
+     content: "\e977";
+ }
+ .icon-quotes-right:before {
+     content: "\e978";
+ }
+ .icon-key:before {
+     content: "\e98d";
+ }
+ .icon-key2:before {
+     content: "\e98e";
+ }
+ .icon-lock:before {
+     content: "\e98f";
+ }
+ .icon-unlocked:before {
+     content: "\e990";
+ }
+ .icon-wrench:before {
+     content: "\e991";
+ }
+ .icon-equalizer:before {
+     content: "\e992";
+ }
+ .icon-equalizer2:before {
+     content: "\e993";
+ }
+ .icon-cog:before {
+     content: "\e994";
+ }
+ .icon-stats-dots:before {
+     content: "\e99b";
+ }
+ .icon-stats-bars:before {
+     content: "\e99c";
+ }
+ .icon-fire:before {
+     content: "\e9a9";
+ }
+ .icon-lab:before {
+     content: "\e9aa";
+ }
+ .icon-earth:before {
+     content: "\e9ca";
+ }
+ .icon-link:before {
+     content: "\e9cb";
+ }
+ .icon-flag:before {
+     content: "\e9cc";
+ }
+ .icon-attachment:before {
+     content: "\e9cd";
+ }
+ .icon-eye:before {
+     content: "\e9ce";
+ }
+ .icon-eye-plus:before {
+     content: "\e9cf";
+ }
+ .icon-eye-minus:before {
+     content: "\e9d0";
+ }
+ .icon-eye-blocked:before {
+     content: "\e9d1";
+ }
+ .icon-bookmark:before {
+     content: "\e9d2";
+ }
+ .icon-bookmarks:before {
+     content: "\e9d3";
+ }
+ .icon-contrast:before {
+     content: "\e9d5";
+ }
+ .icon-brightness-contrast:before {
+     content: "\e9d6";
+ }
+ .icon-heart:before {
+     content: "\e9da";
+ }
+ .icon-heart-broken:before {
+     content: "\e9db";
+ }
+ .icon-happy:before {
+     content: "\e9df";
+ }
+ .icon-smile:before {
+     content: "\e9e1";
+ }
+ .icon-tongue:before {
+     content: "\e9e3";
+ }
+ .icon-sad:before {
+     content: "\e9e5";
+ }
+ .icon-wink:before {
+     content: "\e9e7";
+ }
+ .icon-grin:before {
+     content: "\e9e9";
+ }
+ .icon-cool:before {
+     content: "\e9eb";
+ }
+ .icon-angry:before {
+     content: "\e9ed";
+ }
+ .icon-evil:before {
+     content: "\e9ef";
+ }
+ .icon-shocked:before {
+     content: "\e9f1";
+ }
+ .icon-baffled:before {
+     content: "\e9f3";
+ }
+ .icon-confused:before {
+     content: "\e9f5";
+ }
+ .icon-neutral:before {
+     content: "\e9f7";
+ }
+ .icon-hipster:before {
+     content: "\e9f9";
+ }
+ .icon-wondering:before {
+     content: "\e9fb";
+ }
+ .icon-sleepy:before {
+     content: "\e9fd";
+ }
+ .icon-frustrated:before {
+     content: "\e9ff";
+ }
+ .icon-crying:before {
+     content: "\ea01";
+ }
+ .icon-plus:before {
+     content: "\ea0a";
+ }
+ .icon-minus:before {
+     content: "\ea0b";
+ }
+ .icon-cross:before {
+     content: "\ea0f";
+ }
+ .icon-checkmark:before {
+     content: "\ea10";
+ }
+ .icon-command:before {
+     content: "\ea4e";
+ }
+ .icon-terminal:before {
+     content: "\ea81";
+ }
+ .icon-twitter:before {
+     content: "\ea96";
+ }
+ .icon-twitch:before {
+     content: "\ea9f";
+ }
+ .icon-behance:before {
+     content: "\eaa8";
+ }
+ .icon-deviantart:before {
+     content: "\eaaa";
+ }
+ .icon-steam:before {
+     content: "\eaac";
+ }
+ .icon-github:before {
+     content: "\eab0";
+ }
+ .icon-tumblr:before {
+     content: "\eab9";
+ }
+ .icon-tux:before {
+     content: "\eabd";
+ }
+ .icon-appleinc:before {
+     content: "\eabe";
+ }
+ .icon-finder:before {
+     content: "\eabf";
+ }
+ .icon-android:before {
+     content: "\eac0";
+ }
+ .icon-windows8:before {
+     content: "\eac2";
+ }
+ .icon-soundcloud:before {
+     content: "\eac3";
+ }
+ .icon-reddit:before {
+     content: "\eac6";
+ }
+ .icon-lastfm:before {
+     content: "\eacb";
+ }
+ .icon-IcoMoon:before {
+     content: "\eaea";
  }

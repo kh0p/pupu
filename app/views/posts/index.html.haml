@@ -1,7 +1,10 @@
-.posts-wrap.container-fluid
+.posts-wrapper.row
   -@posts.each do |post|
-    .post.row
-      .col-sm-9
-        =image_tag post.image.url(:medium), :class => "img-responsive"
-      .col-sm-3
+    .post
+      .post-head
+        .name
+          Ben Walker
+      .image.center-block
+        =link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post)
+      %p.caption
         =post.caption

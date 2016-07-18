@@ -14,14 +14,14 @@
             %span.sr-only Toggle Navigation
             %span.icon-bar
             %span.icon-bar
-          .navbar-brand= link_to ":p", root_path
+          .navbar-brand= link_to "", root_path, class: "icon-command"
         .collapse.navbar-collapse#bs-navbar-collapse-1
           %ul.nav.navbar-nav.navbar-right
             %li
-              = link_to "+", new_post_path
+              = link_to "", new_post_path, class: "icon-plus"
             %li
-              = link_to "Login", '#'
+              = link_to "", '#', class: "icon-contrast"
             %li
-              = link_to "Register", '#'
+              = link_to "", '#', class: "icon-lock"
 
     =yield
