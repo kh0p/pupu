@@ -41,8 +41,6 @@ GEM
     arel (7.0.0)
     autoprefixer-rails (6.3.7)
       execjs
-    bootstrap-autohidingnavbar-rails (1.0.0)
-      railties (>= 3.1)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -173,12 +171,13 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    zepto-for-rails (0.2.4)
+      rails (>= 3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-autohidingnavbar-rails
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
@@ -198,6 +197,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console
+  zepto-for-rails
 
 BUNDLED WITH
    1.12.5

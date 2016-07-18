@@ -7,16 +7,11 @@
     =javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-    %nav.navbar.navbar-default.navbar-fixed-top
-      .navbar-container
-        .navbar-header
-          %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
-            %span.sr-only Toggle Navigation
-            %span.icon-bar
-            %span.icon-bar
-          .navbar-brand= link_to "", root_path, class: "icon-command"
-        .collapse.navbar-collapse#bs-navbar-collapse-1
-          %ul.nav.navbar-nav.navbar-right
+    %header#header.header.fixed
+      .wrap
+        .clearfix{:style => 'width:100%;'}
+          = link_to "", root_path, class: "icon-command", id: "logo"
+          %ul#navmenu
             %li
               = link_to "", new_post_path, class: "icon-plus"
             %li
@@ -25,3 +20,19 @@
               = link_to "", '#', class: "icon-lock"
 
     =yield
+
+    :javascript
+      var header = document.querySelector("#header");
+
+      new Headroom(header, {
+        tolerance: {
+          down : 2,
+          up : 5
+        },
+        offset : 100,
+        classes: {
+          initial: "slide",
+          pinned: "slide--reset",
+          unpinned: "slide--up"
+        }
+      }).init();
