@@ -43,6 +43,7 @@ class PostsController < ApplicationController
     else
       flash.now[:alert] = "Failed to erase the post!  Please check the form."
       render 'destroy'
+    end
   end
 
   private
