@@ -73,13 +73,21 @@
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
  }
 
+ a {
+   color: #036464;
+ }
+
+ a:hover {
+   color: #033649;
+ }
+
  #logo {
    display: block;
    float: left;
    font-family: 'Kalam', 'Trebuchet MS', sans-serif;
    color: #FF4242;
    font-weight: normal;
-   font-size: 2.85em;
+   font-size: 34px;
    line-height: 64px;
  }
 
@@ -123,7 +131,7 @@
    display: block;
    float: left;
    padding: 0 20px;
-   font-size: 1.4em;
+   font-size: 24px;
    line-height: 64px;
    font-weight: bold;
    text-decoration: none;
@@ -424,11 +432,7 @@
    line-height: 18px;
    .thumbnail {}
    .name {
-     color: #036564;
      display: block;
-   }
-   .name:hover {
-     color: #033649;
    }
  }
 
@@ -452,6 +456,11 @@
    border: 1px solid #eeefef;
    border-radius: 3px;
  }
+
+ .actions {
+   line-height: 18px;
+   font-size: 24px;
+  }
 
  .edit-links {
    margin-top: 20px;

@@ -8,6 +8,9 @@
     %p.caption
       =@post.caption
     .text-center.edit-links
-      = link_to "", posts_path, class: "icon-cross"
-      %span
-      = link_to "", edit_post_path(@post), class: 'icon-wrench'
+      .actions
+        %ul.list-inline
+          %li
+            = link_to "", posts_path, class: "icon-cross"
+          %li
+            = link_to "", edit_post_path(@post), class: 'icon-wrench'
