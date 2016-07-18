@@ -37,8 +37,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
-    redirect_to root_path
+    if @post.destroy
+      flash[:success] = "You deleted a post!"
+      redirect_to root_path
+    else
+      flash.now[:alert] = "Failed to erase the post!  Please check the form."
+      render 'destroy'
   end
 
   private
