@@ -7,22 +7,13 @@
     =javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-    %header#header.header.fixed
-      .wrap
-        .clearfix{:style => 'width:100%;'}
-          = link_to "", root_path, class: "icon-command", id: "logo"
-          %ul#navmenu
-            %li
-              = link_to "", new_post_path, class: "icon-plus"
-            %li
-              = link_to "", '#', class: "icon-contrast"
-            %li
-              = link_to "", '#', class: "icon-lock"
+    = render 'layouts/navbar'
 
     .container
       -flash.each do |name, msg|
         = content_tag :div, msg, class: [:alert, alert_for(name)]
-    
+
+
     =yield
 
     :javascript

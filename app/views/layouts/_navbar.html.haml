@@ -1,0 +1,19 @@
+%header#header.header.fixed
+  .wrap
+    .clearfix{:style => 'width:100%;'}
+      = link_to "", root_path, class: "icon-command", id: "logo"
+      %ul#navmenu
+        - if user_signed_in?
+          %li
+            = link_to "", new_post_path, class: "icon-plus"
+          %li
+            = link_to "", '#', class: "icon-user"
+          %li
+            = link_to "", destroy_user_session_path, method: :delete, class: "icon-unlocked"
+        - else
+          %li
+            = link_to "", '#', class: "icon-plus"
+          %li
+            = link_to "", '#', class: "icon-user"
+          %li
+            = link_to "", new_user_session_path, class: "icon-lock"
